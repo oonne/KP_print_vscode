@@ -3,6 +3,7 @@
   "displayName": "KP打印项目开发助手",
   "description": "KP打印项目内部使用vscode插件",
   "version": "0.0.1",
+  "publisher": "oonne",
   "engines": {
     "vscode": "^1.61.0"
   },
