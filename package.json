@@ -11,16 +11,20 @@
   ],
   "icon": "assets/icon.png",
   "activationEvents": [
-    "onCommand:extension.sayHello"
+    "workspaceContains:**/fieldKey.ts"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.sayHello",
-        "title": "Hello World"
-      }
-    ]
+    "configuration": {
+      "properties": {
+        "kpPrintHelper.fieldKey": {
+          "default": "",
+          "description": "fieldKey文件路径",
+          "type": "string"
+        }
+      },
+      "title": "KP打印开发小助手"
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -42,5 +46,8 @@
     "glob": "^7.1.7",
     "mocha": "^9.1.1",
     "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "recast": "^0.20.5"
   }
 }
